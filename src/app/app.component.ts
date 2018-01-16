@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   public isRevealed = true;
   public hideBg = false;
   public fadeToBlack = false;
+  public loading = false;
   private interval: any;
 
   ngOnInit() {
