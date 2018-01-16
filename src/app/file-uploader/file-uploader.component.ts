@@ -7,6 +7,7 @@ import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@a
 })
 export class FileUploaderComponent implements OnInit {
   @Output() fileUploaded: EventEmitter<string> = new EventEmitter();
+  @Output() uploadStarted: EventEmitter<boolean> = new EventEmitter();
 
   @ViewChild('fileInput') fileInput: ElementRef;
 
@@ -28,13 +29,11 @@ export class FileUploaderComponent implements OnInit {
     const myReader: FileReader = new FileReader();
 
     myReader.onloadend = () => {
-      // stop Loader
       this.fileUploaded.emit(myReader.result);
     };
     myReader.readAsDataURL(file);
     myReader.onloadstart = () => {
-      console.log('loadStarted');
-      // Start Loader
+      this.uploadStarted.emit(true);
     };
   }
 }

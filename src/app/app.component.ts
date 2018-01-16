@@ -28,11 +28,16 @@ export class AppComponent implements OnInit {
     this.dataUrl = e;
     this.hideFileUploader = true;
     this.stopAnimation();
+    // this.toggleLoader(false);
   }
 
   stopAnimation() {
     clearInterval(this.interval);
     this.hideBg = true;
     this.fadeToBlack = true;
+  }
+
+  toggleLoader(val) {
+    this.loading = val;
   }
 }

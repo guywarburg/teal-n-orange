@@ -3,8 +3,10 @@
   <div class="line" [class.show]="isRevealed" *ngIf="!hideBg"></div>
   <div class="converted-image" [class.show]="isRevealed" *ngIf="!hideBg"></div>
   <div class="app-area">
-    <app-file-uploader [hidden]="hideFileUploader" (fileUploaded)="handleFileUpload($event)"></app-file-uploader>
+    <app-file-uploader [hidden]="hideFileUploader"
+                       (fileUploaded)="handleFileUpload($event)"
+                        (uploadStarted)="toggleLoader($event)"></app-file-uploader>
     <app-canvas-container [dataUrl]="dataUrl"></app-canvas-container>
   </div>
 </div>
-<app-sppinner *ngIf="loading"></app-sppinner>
+<app-spinner *ngIf="loading"></app-spinner>
