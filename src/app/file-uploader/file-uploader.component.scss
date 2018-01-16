@@ -3,20 +3,23 @@
   background-color: #f7f7f7;
   color: #6c6c6c;
   font-size: 2rem;
-  height: 300px;
-  width: 400px;
+  height: 450px;
+  width: 600px;
   position: relative;
+  font-family: "opensans-regular";
 
   label {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 330px;
+    min-width: 385px;
+
     .clickable {
       font-weight: bold;
       text-decoration: underline;
       cursor: pointer;
+      font-family: "opensans-bold";
     }
   }
 }

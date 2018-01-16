@@ -1,7 +1,22 @@
 .container {
-  background: url('../assets/images/bg.jpg') no-repeat top;
-  background-size: cover;
+  background-color: #6c6c6c;
   overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:100vh;
+    background: url('../assets/images/bg.jpg') no-repeat top;
+    background-size: cover;
+    opacity: 1;
+    transition: opacity 2s;
+  }
+  &.black:before {
+    opacity: 0;
+  }
+
 
   .logo {
     background-image: url('../assets/images/TaO -logo.png');

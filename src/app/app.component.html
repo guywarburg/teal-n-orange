@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" [class.black]="fadeToBlack">
   <div class="logo"></div>
-  <div class="line" [class.show]="isRevealed"></div>
-  <div class="converted-image" [class.show]="isRevealed"></div>
+  <div class="line" [class.show]="isRevealed" *ngIf="!hideBg"></div>
+  <div class="converted-image" [class.show]="isRevealed" *ngIf="!hideBg"></div>
   <div class="app-area">
-    <app-file-uploader [hidden]="hideFileUploader" (fileUploaded)="hendleFileUpload($event)"></app-file-uploader>
+    <app-file-uploader [hidden]="hideFileUploader" (fileUploaded)="handleFileUpload($event)"></app-file-uploader>
     <app-canvas-container [dataUrl]="dataUrl"></app-canvas-container>
   </div>
 </div>

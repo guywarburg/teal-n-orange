@@ -9,6 +9,8 @@ export class AppComponent implements OnInit {
   public dataUrl: string;
   public hideFileUploader = false;
   public isRevealed = true;
+  public hideBg = false;
+  public fadeToBlack = false;
   private interval: any;
 
   ngOnInit() {
@@ -21,8 +23,15 @@ export class AppComponent implements OnInit {
     }, 5000);
   }
 
-  hendleFileUpload(e) {
+  handleFileUpload(e) {
     this.dataUrl = e;
     this.hideFileUploader = true;
+    this.stopAnimation();
+  }
+
+  stopAnimation() {
+    clearInterval(this.interval);
+    this.hideBg = true;
+    this.fadeToBlack = true;
   }
 }

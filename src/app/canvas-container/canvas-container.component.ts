@@ -23,8 +23,8 @@ export class CanvasContainerComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    this.height = 300;
-    this.width = 400;
+    this.height = 450;
+    this.width = 600;
     this.ctx = this.canvasRef.nativeElement.getContext('2d');
   }
 
