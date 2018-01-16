@@ -1,5 +1,5 @@
 <div class="container">
   <canvas #canvas [hidden]="!dataUrl" [width]="width" [height]="height" class="z"></canvas>
-  <button (click)="convertTealAndOrange()" [hidden]="!dataUrl" class="converter z">Convert</button>
+  <button (click)="convertTealAndOrange()" [hidden]="!dataUrl || convertedImage" class="converter z">Convert</button>
   <app-download-button [base64]="convertedImage" class="z"></app-download-button>
 </div>
