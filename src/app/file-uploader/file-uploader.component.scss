@@ -1,0 +1,22 @@
+.placeholder {
+  border: 2px dashed #6c6c6c;
+  background-color: #f7f7f7;
+  color: #6c6c6c;
+  font-size: 2rem;
+  height: 300px;
+  width: 400px;
+  position: relative;
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 330px;
+    .clickable {
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

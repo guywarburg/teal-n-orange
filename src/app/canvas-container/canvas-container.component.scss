@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .converter {
+    background-color: #ffb311;
+    border: none;
+    border-radius: 18px;
+    height: 4.5rem;
+    width: 25rem;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+  }
+}

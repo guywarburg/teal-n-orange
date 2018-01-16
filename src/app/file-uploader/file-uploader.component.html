@@ -1,0 +1,4 @@
+<div *ngIf="!imageWasUploaded" class="placeholder">
+  <label>Drop an image here or <span class="clickable" (click)="triggerFileClick()">choose an image</span></label>
+  <input type="file" #fileInput (change)="changeListener($event)" accept="image/*" style="display: none;"/>
+</div>
