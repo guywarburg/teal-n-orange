@@ -1,5 +1,5 @@
 import {
-  Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges,
+  Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges,
   ViewChild
 } from '@angular/core';
 
@@ -45,7 +45,7 @@ export class CanvasContainerComponent implements OnInit, OnChanges {
 
   convertTealAndOrange() {
     for (let i = 0; i < this.imgData.data.length; i += 4) {
-      this.imgData.data[i + 2] = this.imgData.data[i + 1]; // blue -> assign blue
+      this.imgData.data[i + 2] = this.imgData.data[i + 1]; // blue -> assign green
     }
     this.ctx.putImageData(this.imgData, 0, 0);
     this.prepareForDownload();
