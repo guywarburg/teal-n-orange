@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
     this.dataUrl = e;
     this.hideFileUploader = true;
     this.stopAnimation();
-    // this.toggleLoader(false);
+    this.toggleLoader(false);
   }
 
   stopAnimation() {
