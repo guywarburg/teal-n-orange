@@ -7,8 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   public dataUrl: string;
-  public hideFileUploader: boolean = false;
-  public isRevealed: boolean = false;
+  public hideFileUploader = false;
+  public isRevealed = true;
   private interval: any;
 
   ngOnInit() {
@@ -18,8 +18,7 @@ export class AppComponent implements OnInit {
   startInterval() {
     this.interval = setInterval(() => {
       this.isRevealed = !this.isRevealed;
-      console.log('this.isRevealed', this.isRevealed);
-    }, 3000);
+    }, 5000);
   }
 
   hendleFileUpload(e) {
